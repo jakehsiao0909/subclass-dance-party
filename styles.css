@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:white;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -11,7 +11,7 @@ body, a:link, a:visited, a:active{
 }
 .title, .addDancerButton{
   padding:5px 12px;
-  float:right;
+  float:left;
 }
 .topbar{
   height:32px;
@@ -24,4 +24,16 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.pikachu{
+
+
+  position:absolute;
+
+}
+
+.pikachu:hover {
+  transform: rotate(90deg)
+  transform: scale(1)
 }
