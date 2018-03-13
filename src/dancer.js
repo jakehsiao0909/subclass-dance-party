@@ -59,3 +59,7 @@ Dancer.prototype.lineUp = function() {
   }
   this.$node.css(styleSetting);
 }
+
+Dancer.prototype.breakLineUp = function() {
+
+}

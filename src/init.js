@@ -37,19 +37,30 @@ $(document).ready(function() {
  $('.lineUpButton').on('click', function(event) {
 
     window.dancers.forEach(function(dancer,i) {
+      dancer.setPosition(32,20);
       dancer.lineUp(i*10);
     });
 
-    var lineUpFunctionName = $(this).data('lineUp-function-name');
+    // var lineUpFunctionName = $(this).data('lineUp-function-name');
 
-    var lineUpFunction = window[lineUpFunctionName];
+    // var lineUpFunction = window[lineUpFunctionName];
 
-    // var lineUp = new lineUpFunction(
-    //   $("body").height() * 150,
-    //   $("body").width() * 105
-    // );
-    // $("body").append(lineUp.$node);
+
  });
 
+ $('.breakLineUpButton').on('click', function(event) {
+
+    window.dancers.forEach(function(dancer) {
+      dancer.top = $("body").height() * Math.random(),
+      dancer.left = $("body").width() * Math.random(),
+      dancer.setPosition(dancer.top, dancer.left)
+    });
+
+    // var BreakLineUpFunctionName = $(this).data('BreakLineUp-function-name');
+
+    // var BreakLineUpFunction = window[BreakLineUpFunctionName];
+
+
+ });
 });
 

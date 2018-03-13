@@ -4,8 +4,12 @@ body, html{
 body{
   margin: 0px;
   background-color:white;
+  background-image: url('src/forest.png');
   font-size: 18px;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+  max-width: 1365px;
+  max-height: 962px
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -32,9 +36,9 @@ body, a:link, a:visited, a:active{
   height: 120px;
   width: 120px;
   background-size: cover;
-  
-
-  position:absolute;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: top 2s, left 2s, height 0.5s, width 0.5s;
 
 }
 
@@ -47,5 +51,12 @@ body, a:link, a:visited, a:active{
   height: 120px;
   width: 120px;
   background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
+  transition: top 3s, left 3s, height 0.5s, width 0.5s;
+
+}
+.turtleMove {
+  transform:translate(2,1)
+
 }
