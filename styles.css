@@ -5,6 +5,7 @@ body{
   margin: 0px;
   background-color:white;
   font-size: 18px;
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -27,7 +28,11 @@ body, a:link, a:visited, a:active{
 }
 
 .pikachu{
-
+  background-image: url('src/pikachu.gif');
+  height: 120px;
+  width: 120px;
+  background-size: cover;
+  
 
   position:absolute;
 
@@ -35,5 +40,12 @@ body, a:link, a:visited, a:active{
 
 .pikachu:hover {
   transform: rotate(90deg)
-  transform: scale(1)
+}
+
+.turtle {
+  background-image: url('src/Turtle.gif');
+  height: 120px;
+  width: 120px;
+  background-size: cover;
+  position: absolute;
 }

@@ -28,8 +28,28 @@ $(document).ready(function() {
       Math.random() * 1000
     );
 
-    console.log('dancer: ', dancer);
+
     $('body').append(dancer.$node);
+
+    window.dancers.push(dancer);
   });
+
+ $('.lineUpButton').on('click', function(event) {
+
+    window.dancers.forEach(function(dancer,i) {
+      dancer.lineUp(i*10);
+    });
+
+    var lineUpFunctionName = $(this).data('lineUp-function-name');
+
+    var lineUpFunction = window[lineUpFunctionName];
+
+    // var lineUp = new lineUpFunction(
+    //   $("body").height() * 150,
+    //   $("body").width() * 105
+    // );
+    // $("body").append(lineUp.$node);
+ });
+
 });
 

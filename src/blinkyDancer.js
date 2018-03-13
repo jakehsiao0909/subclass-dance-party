@@ -32,3 +32,10 @@ BlinkyDancer.prototype.step = function(timeBetweenSteps) {
   this.right = $("body").width() * Math.random(),
   this.setPosition(this.left, this.right)
 };
+
+BlinkyDancer.prototype.lineUp = function() {
+  var styleSetting = {
+    bottom: 300
+  }
+  this.$node.css(styleSetting);
+}
