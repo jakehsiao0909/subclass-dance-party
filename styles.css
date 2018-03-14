@@ -7,23 +7,81 @@ body{
   background-image: url('src/forest.png');
   font-size: 18px;
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
-  max-width: 1365px;
-  max-height: 962px
+  background-size: 1365px 1006px
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+
 }
 .title, .addDancerButton{
   padding:5px 12px;
-  float:left;
+  float:right;
+  border-radius: 10px;
+  background-color: #777;
+  font-weight: 600;
+  font-family: "Arial Rounded MT Bold";
+  text-decoration: none;
 }
+.title, .addDancerButton:hover{
+  font-size: 22px;
+  color: white
+}
+
+.title, .lineUpButton{
+  padding:5px 12px;
+  float:right;
+  border-radius: 10px;
+  background-color: #777;
+  font-weight: 600;
+  font-family: "Arial Rounded MT Bold";
+  text-decoration: none
+}
+.title, .lineUpButton:hover{
+  font-size: 22px;
+  color: white
+}
+
+.title, .breakLineUpButton{
+  padding:5px 12px;
+  float:right;
+  border-radius: 10px;
+  background-color: #777;
+  font-weight: 600;
+  font-family: "Arial Rounded MT Bold";
+  text-decoration: none;
+  
+}
+.title, .breakLineUpButton:hover{
+  font-size: 22px;
+  color: white
+}
+
+.title, .spinButton{
+  padding:5px 12px;
+  float:right;
+  border-radius: 10px;
+  background-color: #777;
+  font-weight: 600;
+  font-family: "Arial Rounded MT Bold";
+  text-decoration: none;
+  
+}
+.title, .spinButton:hover{
+  font-size: 22px;
+  color: white
+}
+
 .topbar{
-  height:32px;
+  height:35px;
   background-color: #555;
 }
 .title{
   background-color: #777;
+  float: left;
+  text-transform: uppercase;
+
+
 }
 .dancer{
   border:10px solid red;
@@ -33,17 +91,23 @@ body, a:link, a:visited, a:active{
 
 .pikachu{
   background-image: url('src/pikachu.gif');
-  height: 120px;
-  width: 120px;
+  height: 135px;
+  width: 165px;
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  transition: top 2s, left 2s, height 0.5s, width 0.5s;
+  transition: top 3s, left 3s, height 0.5s, width 0.5s;
+  animation: rotation 2s infinite linear;
 
 }
 
-.pikachu:hover {
-  transform: rotate(90deg)
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
 }
 
 .turtle {
@@ -56,7 +120,5 @@ body, a:link, a:visited, a:active{
   transition: top 3s, left 3s, height 0.5s, width 0.5s;
 
 }
-.turtleMove {
-  transform:translate(2,1)
 
-}
+

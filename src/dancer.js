@@ -41,7 +41,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
 };
 
 Dancer.prototype.step = function() {
-  this.time = setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  this.time = setTimeout(this.step.bind(this), 2000);
 };
 
 
@@ -61,5 +61,13 @@ Dancer.prototype.lineUp = function() {
 }
 
 Dancer.prototype.breakLineUp = function() {
+  setTimeout(this.setPosition.bind(this), 1000);
+}
 
+
+Dancer.prototype.spin = function() {
+  var styleSetting = {
+    animation: spin
+  };
+  this.$node.css(styleSettings);
 }

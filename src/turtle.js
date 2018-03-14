@@ -14,7 +14,7 @@ Turtle.prototype.step = function(timeBetweenSteps) {
   this.left = $("body").height() * Math.random(),
   this.right = $("body").width() * Math.random(),
   this.setPosition(this.left, this.right);
-  
+
   this.$node.fadeIn();
 
 
@@ -45,20 +45,20 @@ Turtle.prototype.lineUp = function(i) {
 
 Turtle.prototype.breakLineUp = function() {
 
-    var styleSetting = {
+  var styleSetting = {
     left: $("body").height() * Math.random(),
     top: $("body").width() * Math.random()
   }
 
   while (styleSetting.top > 830) {
-     styleSetting.top = $("body").height() * Math.random(),
-     styleSetting.left = $("body").width() * Math.random(),
+     styleSetting.top -= 100,
+     styleSetting.left = styleSetting.left,
      styleSetting.setPosition(styleSetting.top, styleSetting.left)
   }
 
   while (styleSetting.left > 1200) {
-     styleSetting.top = $("body").height() * Math.random(),
-     styleSetting.left = $("body").width() * Math.random(),
+     styleSetting.top = styleSetting.top,
+     styleSetting.left -= 200,
      styleSetting.setPosition(styleSetting.top, styleSetting.left)
   }
   this.$node.css(styleSetting);
